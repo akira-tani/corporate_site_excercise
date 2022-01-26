@@ -1,0 +1,235 @@
+body {
+  line-height: 1.6;
+}
+a:hover {
+  opacity: 0.5 ;
+  transition: 0.3s;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/*------------header--------------*/
+.header {
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  align-items: center;
+  z-index: 1;
+  background: white;
+}
+.header__title {
+  font-size: 24px;
+}
+.header__nav__list {
+  display: flex;
+}
+.header__nav__item {
+  margin-right: 30px;
+  font-weight: bold;
+}
+.header__nav__item:last-child {
+  margin-right: 0;
+}
+.nav {
+  display: none;
+}
+.nav__menu {
+  display: none;
+}
+/* レスポンシブ(768px以下)*/
+@media screen and (max-width: 768px) {
+  .header__nav__list {
+    display: none;
+  }
+  a {
+    text-decoration: none;
+  }
+  .nav {
+    display: block;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: -100%;
+    transition: .7s;
+    background: white;
+  }
+  .nav__list {
+    padding-top: 80px;
+    text-align: center;
+    color: blue;
+    font-size: 18px;
+  }
+  .nav__item {
+    list-style-type: none;
+    margin-top: 50px;
+  }
+  .nav__menu {
+    display: inline-block;
+    width: 36px;
+    height: 32px;
+    cursor: pointer;
+    position: relative;
+  }
+  .nav__menu--top,
+  .nav__menu--middle,
+  .nav__menu--bottom {
+    display: inline-block;
+    width: 100%;
+    height: 4px;
+    background-color: #000;
+    position: absolute;
+    transition: 0.5s;
+  }
+  .nav__menu--top {
+    top: 0;
+  }
+  .nav__menu--middle {
+    top: 14px;
+  }
+  .nav__menu--bottom {
+    bottom: 0;
+  }
+  .nav__menu.open span:nth-of-type(1) {
+    top: 14px;
+    transform: rotate(45deg);
+  }
+  .nav__menu.open span:nth-of-type(2) {
+    opacity: 0;
+  }
+  .nav__menu.open span:nth-of-type(3) {
+    top: 14px;
+    transform: rotate(-45deg);
+  }
+  .in {
+    transform: translateX(100%);
+  }
+}
+
+/*------------page-mv--------------*/
+.page-mv {
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background: url(../img/mv.png) center/cover;
+}
+.title {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/*------------main--------------*/
+.service {
+  padding: 80px 0;
+  width: 85%;
+  margin: 0 auto;
+}
+.service__item {
+  padding: 20px 0;
+  border-top: 1px solid rgb(32, 32, 32);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.service__item:last-child {
+  border-bottom: 1px solid rgb(32, 32, 32);
+}
+.service__item__img {
+  width: 290px;
+}
+.service__item__img img {
+  width: 100%;
+  height: auto;
+}
+.service__item__content {
+  width: calc(100% - 330px);
+}
+.service__item__title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* レスポンシブ(768px以下)*/
+@media screen and (max-width: 768px) {
+  .service__item__img {
+  width: 100%;
+  }
+  .service__item__content {
+  width: 100%;
+  }
+}
+
+/*------------contact--------------*/
+.bottom-contact {
+  background-color: #f5f6f9;
+  text-align: center;
+  padding: 80px 0;
+}
+.bottom-contact__wrapper {
+  width: 85%;
+  margin: 0 auto;
+}
+.bottom-contact__title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.bottom-contact__button {
+  width: 300px;
+  background: #cd0224;
+  display: inline-block;
+  color: white;
+  margin: 40px auto 0;
+  padding: 10px;
+  font-weight: bold;
+}
+
+/*------------footer--------------*/
+.footer {
+  background:rgb(32, 32, 32);
+  color: white;
+  padding: 20px 0;
+}
+.footer__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  width: 85%;
+  margin: 0 auto;
+}
+.footer__nav__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer__nav__item:after {
+  content: "|";
+  padding: 0 10px;
+}
+.footer__nav__item:last-child:after {
+  display: none;
+}
+
+/* レスポンシブ(768px以下)*/
+@media screen and (max-width: 768px) {
+  .footer__copyright {
+    margin: 0 auto;
+    text-align: center;
+  }
+  .footer__nav__item {
+    text-align: center;
+    margin-top: 10px;
+    width: 100%;
+  }
+  .footer__nav__item:after {
+    display: none;
+  }
+}
